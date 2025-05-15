@@ -103,7 +103,7 @@ const bannerConfig = {
       infoCardBg: 'bg-cyan-800',
     },
   
-    '/services': {
+    '/patients/services-and-treatments': {
       image: servicesImg,
       altText: 'Medical services tools',
       titleSmall: 'Our Services',
