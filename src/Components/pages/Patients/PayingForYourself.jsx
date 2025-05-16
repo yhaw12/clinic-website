@@ -27,7 +27,7 @@ const PayingForYourself = () => (
           px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
-          <div className="bg-purple-700 text-white p-8 flex flex-col justify-between mt-8 relative">
+          <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Transparent Fees</h2>
               <p className="mb-4">
@@ -45,7 +45,7 @@ const PayingForYourself = () => (
             {/* Desktop Icon */}
             <div className="hidden md:flex justify-center mt-8 relative w-full">
               <div className="absolute -bottom-18 left-1/2 transform -translate-x-1/2
-                w-16 h-16 lg:w-20 lg:h-20 bg-purple-700 rounded-full
+                w-16 h-16 lg:w-20 lg:h-20 bg-orange-900 rounded-full
                 flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
               ">
                 <div className="w-10 h-10 facebook-cutout">
@@ -59,7 +59,7 @@ const PayingForYourself = () => (
             <img src={transparentFees} alt="Transparent Fees" className="w-full h-full object-cover" />
             {/* Mobile Icon */}
             <div className="block md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2
-              w-16 h-16 bg-purple-700 rounded-full
+              w-16 h-16 bg-orange-900 rounded-full
               flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
             ">
               <div className="w-10 h-10 facebook-cutout">
@@ -88,7 +88,7 @@ const PayingForYourself = () => (
             <img src={pricingDetails} alt="Treatment Pricing" className="w-full h-full object-cover" />
             {/* Mobile Icon */}
             <div className="block md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2
-              w-16 h-16 bg-purple-700 rounded-full
+              w-16 h-16 bg-orange-900 rounded-full
               flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
             ">
               <div className="w-10 h-10 facebook-cutout">
@@ -97,7 +97,7 @@ const PayingForYourself = () => (
             </div>
           </div>
           {/* Card Right */}
-          <div className="bg-purple-700 text-white p-8 flex flex-col justify-between mt-8 relative order-1 md:order-2">
+          <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative order-1 md:order-2">
             <h3 className="text-xl font-medium mb-4">Clear Treatment Pricing</h3>
             <p className="mb-4">
               Detailed breakdowns of each procedure are available on 
@@ -113,7 +113,7 @@ const PayingForYourself = () => (
             {/* Desktop Icon */}
             <div className="hidden md:flex justify-center mt-8 relative w-full">
               <div className="absolute -bottom-18 left-1/2 transform -translate-x-1/2
-                w-16 h-16 lg:w-20 lg:h-20 bg-purple-700 rounded-full
+                w-16 h-16 lg:w-20 lg:h-20 bg-orange-900 rounded-full
                 flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
               ">
                 <div className="w-10 h-10 facebook-cutout">
@@ -138,7 +138,7 @@ const PayingForYourself = () => (
           px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
-          <div className="bg-purple-700 text-white p-8 flex flex-col justify-between mt-8 relative">
+          <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative">
             <h3 className="text-xl font-medium mb-4">Flexible Payment Methods</h3>
             <p className="mb-4">
               We accept card, bank transfer, and mobile money. Choose the option that suits you best.
@@ -156,7 +156,7 @@ const PayingForYourself = () => (
             {/* Desktop Icon */}
             <div className="hidden md:flex justify-center mt-8 relative w-full">
               <div className="absolute -bottom-18 left-1/2 transform -translate-x-1/2
-                w-16 h-16 lg:w-20 lg:h-20 bg-purple-700 rounded-full
+                w-16 h-16 lg:w-20 lg:h-20 bg-orange-900 rounded-full
                 flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
               ">
                 <div className="w-10 h-10 facebook-cutout">
@@ -170,7 +170,7 @@ const PayingForYourself = () => (
             <img src={paymentMethods} alt="Payment Options" className="w-full h-full object-cover" />
             {/* Mobile Icon */}
             <div className="block md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2
-              w-16 h-16 bg-purple-700 rounded-full
+              w-16 h-16 bg-orange-900 rounded-full
               flex items-center justify-center overflow-hidden shadow-sm border-4 border-white
             ">
               <div className="w-10 h-10 facebook-cutout">

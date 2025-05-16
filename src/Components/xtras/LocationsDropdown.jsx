@@ -19,7 +19,7 @@ const LocationsDropdown = () => {
           </p>
           <ul className="grid grid-cols-2 gap-6 text-sm max-w-lg">
             <li>
-              <a href="#" className="border-b border-white pb-3 block ">
+              <a href="/contact" className="border-b border-white pb-3 block ">
                 Divine Sanitas Medical Clinic Main
               </a>
             </li>

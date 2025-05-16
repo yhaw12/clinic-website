@@ -29,7 +29,7 @@ const bannerConfig = {
         titleSmall: 'Welcome to DSMC',
         titleLarge: 'Expert care with compassion and precision.',
         link: '/services',
-        infoCardBg: 'bg-purple-900',
+        infoCardBg: 'bg-purple-700',
       },
       {
         image: home2,
@@ -95,6 +95,14 @@ const bannerConfig = {
     },
   
     '/contact': {
+      image: contactImg,
+      altText: 'Contact us desk',
+      titleSmall: 'Get in Touch',
+      titleLarge: 'We’re here to answer your questions.',
+      link: '/faqs',
+      infoCardBg: 'bg-cyan-800',
+    },
+    '/get-in-touch': {
       image: contactImg,
       altText: 'Contact us desk',
       titleSmall: 'Get in Touch',

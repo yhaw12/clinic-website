@@ -150,3 +150,21 @@ h6,
 .submenu.expanded {
   max-height: 500px; /* Adjust based on content height */
 }
+
+
+.carousels {
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+}
+
+@keyframes slideSide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

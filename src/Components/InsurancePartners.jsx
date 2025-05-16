@@ -1,7 +1,19 @@
 import React from 'react';
-// import partner1 from '../assets/partner1.png';
-// import partner2 from '../assets/partner2.png';
-// import partner3 from '../assets/partner3.png';
+import cosmopolitan from '../assests/insurance/ghic.png';
+import acacia from '../assests/insurance/acacia.png';
+import phoenix from '../assests/insurance/gab indur.png';
+import ace from '../assests/insurance/apex.png';
+// import millennium from '../assets/insurance/millennium.svg';
+import nhis from '../assests/insurance/nhis.jpg';
+
+const logos = [
+  { src: cosmopolitan, alt: 'GHIC Health Insurance' },
+  { src: acacia, alt: 'Acacia Health Insurance' },
+  { src: phoenix, alt: 'Gab Health Insurance' },
+  { src: ace, alt: 'Apex Medical Insurance' },
+  // { src: millennium, alt: 'Millennium Insurance Company Limited' },
+  { src: nhis, alt: 'National Health Insurance Scheme' },
+];
 
 const InsurancePartners = () => {
   return (
@@ -9,13 +21,19 @@ const InsurancePartners = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
         Our Insurance Partners
       </h2>
-      <div className="flex flex-wrap justify-center items-center gap-8">
-        {/* <img src={partner1} alt="Partner 1" className="w-32 object-contain filter grayscale" />
-        <img src={partner2} alt="Partner 2" className="w-32 object-contain filter grayscale" />
-        <img src={partner3} alt="Partner 3" className="w-32 object-contain filter grayscale" /> */}
+      <div className="carousels overflow-hidden">
+        <div className="logos flex" style={{ animation: 'slideSide 20s linear infinite' }}>
+          {logos.map((logo, index) => (
+            <img key={index} src={logo.src} alt={logo.alt} className="w-32 mx-4" />
+          ))}
+          {logos.map((logo, index) => (
+            <img key={index + logos.length} src={logo.src} alt={logo.alt} className="w-32 mx-4" />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default InsurancePartners;
+

@@ -10,7 +10,6 @@ const BlogNews = () => {
   const [current, setCurrent] = useState(0);
   const startX = useRef(0);
   const dragging = useRef(false);
-  const containerRef = useRef(null);
 
   const posts = [
     { id: 1, date: '15 Jul 24', title: 'Health Outreach Program', image: outreachProgram },
@@ -22,7 +21,6 @@ const BlogNews = () => {
 
   const total = posts.length;
 
-  // Desktop: show 4 at a time
   const desktopSlice = () => {
     const slice = [];
     for (let i = 0; i < 4; i++) {
@@ -34,37 +32,37 @@ const BlogNews = () => {
   const handlePrevDesktop = () => {
     setCurrent((prev) => (prev - 1 + total) % total);
   };
+
   const handleNextDesktop = () => {
     setCurrent((prev) => (prev + 1) % total);
   };
 
-  // Mobile drag/swipe handlers (3-card peek)
   const handleMouseDown = (e) => {
     dragging.current = true;
     startX.current = e.clientX;
   };
+
   const handleMouseMove = (e) => {
     if (!dragging.current) return;
     const diff = startX.current - e.clientX;
     if (Math.abs(diff) > 50) {
-      setCurrent((prev) =>
-        diff > 0 ? (prev + 1) % total : (prev - 1 + total) % total
-      );
+      setCurrent((prev) => (diff > 0 ? (prev + 1) % total : (prev - 1 + total) % total));
       dragging.current = false;
     }
   };
+
   const handleMouseUp = () => {
     dragging.current = false;
   };
+
   const handleTouchStart = (e) => {
     startX.current = e.touches[0].clientX;
   };
+
   const handleTouchMove = (e) => {
     const diff = startX.current - e.touches[0].clientX;
     if (Math.abs(diff) > 50) {
-      setCurrent((prev) =>
-        diff > 0 ? (prev + 1) % total : (prev - 1 + total) % total
-      );
+      setCurrent((prev) => (diff > 0 ? (prev + 1) % total : (prev - 1 + total) % total));
       startX.current = e.touches[0].clientX;
     }
   };
@@ -80,28 +78,27 @@ const BlogNews = () => {
           {/* Desktop Prev Button */}
           <button
             onClick={handlePrevDesktop}
-            className="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2 \
-                       w-12 h-12 hover:opacity-80 z-10"
+            className="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12 hover:opacity-80 z-10"
             aria-label="Previous posts"
           >
             <ChevronLeft className="m-auto h-8 w-8 text-gray-800" />
           </button>
 
-          {/* Desktop Grid: 4 cards */}
+          {/* Desktop Grid */}
           <div className="hidden lg:grid lg:grid-cols-4 lg:gap-6">
             {desktopSlice().map((post) => (
               <article
                 key={post.id}
-                className="bg-white overflow-hidden cursor-pointer"
+                className="flex flex-col bg-white h-full overflow-hidden cursor-pointer"
               >
-                <div className="h-56 overflow-hidden">
+                <div className="h-56 w-full overflow-hidden flex-shrink-0">
                   <img
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-5 bg-[#d9fbf7]">
+                <div className="flex-1 flex flex-col justify-between p-5 bg-[#d9fbf7]">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                   <h3 className="text-lg font-semibold text-gray-800 line-clamp-2">
                     {post.title}
@@ -114,8 +111,7 @@ const BlogNews = () => {
           {/* Desktop Next Button */}
           <button
             onClick={handleNextDesktop}
-            className="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 \
-                       w-12 h-12 hover:opacity-80 z-10"
+            className="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 hover:opacity-80 z-10"
             aria-label="Next posts"
           >
             <ChevronRight className="m-auto h-8 w-8 text-gray-800" />
@@ -131,11 +127,7 @@ const BlogNews = () => {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
           >
-            {[
-              posts[(current - 1 + total) % total],
-              posts[current],
-              posts[(current + 1) % total],
-            ].map((post, idx) => (
+            {[posts[(current - 1 + total) % total], posts[current], posts[(current + 1) % total]].map((post, idx) => (
               <div
                 key={idx}
                 className={`flex-shrink-0 ${
@@ -149,7 +141,7 @@ const BlogNews = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4">
+                <div className="p-4 bg-[#d9fbf7]">
                   <p className="text-sm text-gray-500 mb-1">{post.date}</p>
                   <h3 className="text-base font-medium text-gray-800 line-clamp-2">
                     {post.title}
