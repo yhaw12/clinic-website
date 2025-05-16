@@ -118,7 +118,7 @@ const Navbar = () => {
         <a href="/"><img src={logo} alt="DGI Ghana Hospital Logo" className="h-20 cursor-pointer" /></a>
           {/* Desktop Nav + Search Icon */}
           <div className="hidden md:flex items-center space-x-20">
-            <nav className="flex space-x-8 text-gray-700 font-medium text-xl">
+            <nav className="flex space-x-20 text-gray-700 font-medium text-xl">
               {menuItems.map(({ key, label }) => (
                 <div
                   key={key}
