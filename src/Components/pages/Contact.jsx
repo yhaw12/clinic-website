@@ -23,7 +23,7 @@ export default function Contact() {
     <div className="font-inter text-gray-800">
 
       {/* Split Hero */}
-      <header className="flex flex-col lg:flex-row h-screen">
+      <header className="flex flex-col lg:flex-row  h-screen">
         {/* Left Text */}
         <div className="lg:w-1/2 flex items-center justify-center bg-blue-800 text-white px-8">
           <div className="max-w-md space-y-6">

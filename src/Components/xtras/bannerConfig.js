@@ -93,6 +93,14 @@ const bannerConfig = {
     link: '/faqs',
     infoCardBg: 'bg-cyan-800',
   },
+  '/get-in-touch': {
+    image: contactImg,
+    altText: "Lets's Talk",
+    titleSmall:  "Lets's Talk",
+    titleLarge: 'We’re here to answer your questions.',
+    link: '/faqs',
+    infoCardBg: 'bg-blue-800',
+  },
   '/services': {
     image: servicesImg,
     altText: 'Medical services tools',

@@ -3,25 +3,25 @@ import { ArrowRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Dr. David Okoh",
+    name: "Dr. Banful",
     title: "Consultant Family Physician",
-    image: "/images/doctor1.jpg",
+    image: "/images/placeholder.jpg",
     description:
-      "Dr. Okoh brings over 15 years of experience in family medicine, specializing in chronic disease management and preventive care. He is dedicated to building strong patient relationships and promoting holistic health.",
+      "Dr. Banful brings over 15 years of experience in family medicine, specializing in chronic disease management and preventive care. He is dedicated to building strong patient relationships and promoting holistic health.",
   },
   {
-    name: "Nurse Amina Yusuf",
+    name: "Madam Kate",
     title: "Senior Registered Nurse",
-    image: "/images/nurse1.jpg",
+    image: "/images/placeholder.jpg",
     description:
-      "With a compassionate approach and 10 years of clinical experience, Nurse Amina excels in patient-centered care and nursing leadership. She is passionate about improving patient outcomes and mentoring junior nurses.",
+      "With a compassionate approach and 10 years of clinical experience, Nurse Kate excels in patient-centered care and nursing leadership. She is passionate about improving patient outcomes and mentoring junior nurses.",
   },
   {
-    name: "Dr. Tunde Balogun",
-    title: "Clinical Pharmacist",
-    image: "/images/pharmacist1.jpg",
+    name: "Madam Cynthia",
+    title: "Midwife",
+    image: "/images/placeholder.jpg",
     description:
-      "Dr. Balogun ensures safe and effective medication use. With a focus on clinical pharmacology and patient education, he works closely with the healthcare team to optimize therapeutic outcomes.",
+      "Madam Cynthia is a skilled midwife with extensive experience in prenatal, labor, and postnatal care. She provides compassionate support to mothers and newborns, ensuring a safe and positive birthing experience.",
   },
 ];
 
@@ -68,6 +68,7 @@ export default function HealthTeam() {
                 src={member.image}
                 alt={member.name}
                 className="object-cover w-full h-full"
+                onError={(e) => { e.currentTarget.src = "/images/placeholder.jpg" }}
               />
               {/* WhatsApp Icon with number */}
               <a
@@ -86,11 +87,9 @@ export default function HealthTeam() {
                     <path d="M20.52 3.48A11.856 11.856 0 0012 0C5.37 0 .04 5.35.04 11.97c0 2.11.55 4.16 1.6 5.97L0 24l6.29-1.64c1.74.94 3.7 1.44 5.71 1.44h.01c6.63 0 12-5.35 12-11.96a11.83 11.83 0 00-3.49-8.36zM12 21.82c-1.68 0-3.33-.44-4.78-1.28l-.34-.2-3.73.97.99-3.63-.22-.37A9.899 9.899 0 012.2 11.98c0-5.41 4.41-9.81 9.82-9.81 2.63 0 5.1 1.03 6.96 2.89a9.795 9.795 0 012.87 6.91c.01 5.4-4.41 9.81-9.82 9.81zm5.17-7.57c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.6.14-.17.28-.69.9-.84 1.08-.15.17-.31.2-.59.07-.28-.14-1.17-.43-2.24-1.38-.83-.74-1.39-1.66-1.56-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.31.42-.46.14-.14.19-.25.28-.42.09-.17.04-.31-.02-.45-.07-.14-.6-1.44-.82-1.97-.22-.53-.45-.46-.6-.46-.15 0-.31 0-.47 0-.17 0-.44.06-.67.31s-.88.86-.88 2.1c0 1.24.9 2.43 1.02 2.6.13.17 1.76 2.68 4.27 3.75.6.26 1.07.42 1.43.54.6.19 1.14.17 1.57.1.48-.07 1.48-.6 1.69-1.18.21-.58.21-1.07.15-1.18-.06-.11-.25-.17-.53-.3z" />
                   </svg>
                 </div>
-              
               </a>
-
-              </motion.div>
-            </div>
+            </motion.div>
+          </div>
 
           <svg
             className="absolute bottom-0 left-0 w-full text-white"
