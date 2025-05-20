@@ -32,7 +32,6 @@ const Navbar = () => {
     }
   }, [active]);
 
-  // prevent background scroll when a modal, dropdown or mobile menu is open
   useEffect(() => {
     if (mobileOpen || active || searchOpen) {
       document.body.classList.add("no-scroll");
@@ -51,13 +50,12 @@ const Navbar = () => {
       ]
     },
     { key: "specialists", label: "Specialists", submenu: [
-        { label: "Orthopaedic specialists", link: "/specialists/orthopaedic" },
+        { label: "Skin specialists", link: "/specialists/skin" },
         { label: "Medicine specialists", link: "/specialists/" },
       ]
     },
     { key: "conditions", label: "Conditions", submenu: [
-        { label: "Knee conditions", link: "/conditions/knee" },
-        { label: "Shoulder conditions", link: "/conditions/shoulder" },
+        { label: "Medical conditions", link: "/conditions/medical" },
       ]
     },
     { key: "team", label: "Team", submenu: [
@@ -88,36 +86,31 @@ const Navbar = () => {
     }, 300);
   };
 
-  // Unified search submit
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-  
     const q = searchQuery.trim().toLowerCase();
     if (!q) return;
-  
     const exactMatch = searchIndex.find(item =>
       item.title.toLowerCase() === q
     );
-  
     if (exactMatch) {
       navigate(exactMatch.path);
     } else {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
     }
-  
     setSearchOpen(false);
     setSearchQuery("");
   };
-  
-  
 
   return (
     <>
       <header className="fixed w-full top-0 bg-white shadow-sm z-50 transition-all duration-300">
-      <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-center md:justify-between relative">
-        <a href="/"><img src={logo} alt="DGI Ghana Hospital Logo" className="h-20 cursor-pointer" /></a>
+        <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-center lg:justify-between relative">
+          <a href="/" className="flex-shrink-0">
+            <img src={logo} alt="DGI Ghana Hospital Logo" className="h-20 cursor-pointer" />
+          </a>
           {/* Desktop Nav + Search Icon */}
-          <div className="hidden md:flex items-center space-x-20">
+          <div className="hidden lg:flex items-center space-x-20">
             <nav className="flex space-x-20 text-gray-700 font-medium text-xl">
               {menuItems.map(({ key, label }) => (
                 <div
@@ -142,7 +135,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-gray-700 absolute right-6 top-4 z-50" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className="lg:hidden text-gray-700 absolute right-6 top-4 z-50" onClick={() => setMobileOpen(!mobileOpen)}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -184,16 +177,15 @@ const Navbar = () => {
       {/* Mobile Menu Panel */}
       <div className="pt-24 md:pt-20">
         {mobileOpen && (
-          <div className="md:hidden fixed inset-0 bg-[#3c2e58] text-white z-[100] overflow-y-auto">
+          <div className="fixed inset-0 bg-[#3c2e58] text-white z-[100] overflow-y-auto">
             <div className="flex flex-col">
               <div className="flex justify-end p-4">
                 <button onClick={() => { setMobileOpen(false); setExpandedMenu(null); }} className="text-2xl">✕</button>
               </div>
               <ul className="divide-y divide-gray-400 text-xl px-6">
-
-                {/* 1) Mobile “Search” button as a proper <li> */}
+                {/* Mobile “Search” button */}
                 <li className="flex items-center justify-between py-2 border-b border-gray-600">
-                <span>Search</span>
+                  <span>Search</span>
                   <button
                     onClick={() => {
                       setSearchOpen(true);
@@ -202,7 +194,6 @@ const Navbar = () => {
                     className="flex items-center space-x-2"
                     aria-label="Open search"
                   >
-                    
                     <svg xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5"
                         fill="none"
@@ -214,7 +205,7 @@ const Navbar = () => {
                   </button>
                 </li>
 
-                {/* 2) Your normal entries will now inherit text‑xl */}
+                {/* Normal entries */}
                 <li className="py-2 border-b border-gray-600">
                   <Link to="/about" className="block">About</Link>
                 </li>
@@ -249,8 +240,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                 ))}
-
-                </ul>
+              </ul>
 
               <div className="bg-[#e6e0f1] text-[#3c2e58] px-6 pt-8 pb-36 space-y-2 text-2xl leading-relaxed">
                 <p><span className="px-2 rounded">Ways</span> to get in touch...</p>

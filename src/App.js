@@ -25,7 +25,6 @@ import Services from './Components/pages/Services';
 function App() {
   return (
     <Routes>
-      {/* everything inside Layout gets Navbar/Banner/Footer/TawkTo */}
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchResults />} />

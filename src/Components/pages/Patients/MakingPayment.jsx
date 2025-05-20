@@ -22,11 +22,11 @@ const MakingPayment = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-screen-xl mx-auto px-4 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch">
+          <div className="max-w-screen-xl mx-auto px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch">
             <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative">
               <h2 className="text-2xl font-semibold mb-4">Flexible Payment Options</h2>
               <p className="text-lg mb-4">
-                Fortius offers secure and convenient payment methods to suit your preferences:
+                We offers secure and convenient payment methods to suit your preferences:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>Online payment via credit/debit card</li>
@@ -72,7 +72,7 @@ const MakingPayment = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-screen-xl mx-auto px-4 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch">
+          <div className="max-w-screen-xl mx-auto px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch">
             <div className="pb-12 order-2 md:order-1 relative">
               <img src={billingSupportImage} alt="Billing Support" className="w-full h-full object-cover" />
               <div className="block md:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-orange-900 rounded-full flex items-center justify-center overflow-hidden shadow-sm border-4 border-white">

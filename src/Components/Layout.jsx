@@ -5,7 +5,7 @@ import Navbar from './Nav';
 import Banner from './Banner';
 import Footer from './Footer';
 import TawkTo from './xtras/TawkTo';
-// import InsurancePartners from './InsurancePartners';
+import InsurancePartners from './InsurancePartners';
 
 export default function Layout() {
   return (
@@ -15,7 +15,7 @@ export default function Layout() {
       <main className="pt-24 md:pt-20 flex-1">
         <Outlet />            
       </main>
-      {/* <InsurancePartners /> */}
+      <InsurancePartners />
       <Footer />
       <TawkTo />
     </>

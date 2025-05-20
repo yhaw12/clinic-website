@@ -1,5 +1,5 @@
 import home1 from '../../assests/banners/clinic.jpg';
-import home2 from '../../assests/banners/clinic kasoa 2nd.jpg';
+import home2 from '../../assests/banners/consultation.jpeg';
 import home3 from '../../assests/banners/divine clinic.jpg';
 
 import aboutImg from '../../assests/banners/medical teamkasoa.jpg';
@@ -95,8 +95,8 @@ const bannerConfig = {
   },
   '/get-in-touch': {
     image: contactImg,
-    altText: "Lets's Talk",
-    titleSmall:  "Lets's Talk",
+    altText: "Let's Talk",
+    titleSmall: "Let's Talk",
     titleLarge: 'We’re here to answer your questions.',
     link: '/faqs',
     infoCardBg: 'bg-blue-800',
@@ -156,6 +156,15 @@ const bannerConfig = {
     titleLarge: 'Caring professionals at your service.',
     link: '/services',
     infoCardBg: 'bg-fuchsia-800',
+  },
+
+  '/search': {
+    image: notFoundImg,
+    altText: 'Search page banner',
+    titleSmall: 'Looking for something?',
+    titleLarge: 'Got what you wanted?',
+    link: '/',
+    infoCardBg: 'bg-purple-700',
   },
   '*': {
     image: notFoundImg,

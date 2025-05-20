@@ -24,14 +24,14 @@ const BecomingPatient = () => (
         {/* Section 1 - Register at Our Facility */}
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
           <div className="bg-teal-900 text-white p-8 flex flex-col justify-between mt-8 relative">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Register at Our Facility</h2>
               <p className="text-3xl mb-4">
-                Visit our Fortius clinic front desk to complete the registration process.
+                Visit our clinic front desk to complete the registration process.
                 Our friendly staff will guide you and answer any questions you have.
               </p>
             </div>
@@ -79,7 +79,7 @@ const BecomingPatient = () => (
       >
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Image Left */}
           <div className="pb-12 order-2 md:order-1 relative">
@@ -132,7 +132,7 @@ const BecomingPatient = () => (
       >
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
           <div className="bg-teal-900 text-white p-8 flex flex-col justify-between mt-8 relative">

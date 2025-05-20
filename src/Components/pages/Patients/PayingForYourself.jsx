@@ -24,7 +24,7 @@ const PayingForYourself = () => (
       >
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
           <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative">
@@ -32,7 +32,7 @@ const PayingForYourself = () => (
               <h2 className="text-2xl font-semibold mb-4">Transparent Fees</h2>
               <p className="mb-4">
                 All our consultation and diagnostic fees are listed transparently on 
-                <a href="https://dgigh.org" className="underline">Divine Sanitas</a>,
+                 <a href="https://dgigh.org" className=""> Divine Sanitas</a>,
                 ensuring you know exactly what to expect before you visit.
               </p>
             </div>
@@ -81,7 +81,7 @@ const PayingForYourself = () => (
       >
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Image Left */}
           <div className="pb-12 order-2 md:order-1 relative">
@@ -101,7 +101,7 @@ const PayingForYourself = () => (
             <h3 className="text-xl font-medium mb-4">Clear Treatment Pricing</h3>
             <p className="mb-4">
               Detailed breakdowns of each procedure are available on 
-              <a href="https://dgigh.org" className="underline">Divine Sanitas</a>.
+              <a href="https://dgigh.org" className=""> Divine Sanitas</a>.
               Plan your care with confidence, knowing there are no hidden costs.
             </p>
             <a href="#" className="inline-flex items-center text-md">
@@ -135,7 +135,7 @@ const PayingForYourself = () => (
       >
         <div className="
           max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto
-          px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
+          px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch fade-up
         ">
           {/* Card Left */}
           <div className="bg-orange-900 text-white p-8 flex flex-col justify-between mt-8 relative">
@@ -145,7 +145,7 @@ const PayingForYourself = () => (
             </p>
             <p className="mb-4">
               For special cases, inquire about our financial assistance plans at 
-              <a href="https://dgigh.org" className="underline">Divine Sanitas</a>.
+              <a href="https://dgigh.org" className=""> Divine Sanitas</a>.
             </p>
             <a href="#" className="inline-flex items-center text-md">
               Learn more

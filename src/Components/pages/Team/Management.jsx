@@ -1,26 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
-import placeholder1 from '../../../assests/ben.jpg';
-import placeholder2 from '../../../assests/kaba.jpg';
-import placeholder3 from '../../../assests/osman.jpg';
-import placeholder4 from '../../../assests/dgi.jpg';
+import placeholder1 from '../../../assests/Management-team/ben.jpg';
+import placeholder2 from '../../../assests/Management-team/kaba.jpg';
+import placeholder3 from '../../../assests/Management-team/osman.jpg';
+import placeholder4 from '../../../assests/Management-team/Geshon.jpeg';
+import placeholder5 from '../../../assests/Management-team/midwife.jpeg';
+import placeholder6 from '../../../assests/Management-team/Debrah.jpeg'
 
 const managementProfiles = [
   {
-    name: "Professor",
-    role: "Chairman",
-    image: placeholder1,
+    name: "Professor Samuel Kaba",
+    role: "Board Chairman",
+    image: placeholder2,
     bio: "Leads the strategic direction of the clinic with over 20 years of experience in healthcare management.",
   },
   {
     name: "Ebenezer Adu‑Lartey",
-    role: "CEO",
-    image: placeholder2,
+    role: "Chief Executive Officer",
+    image: placeholder1,
     bio: "Oversees daily operations and ensures the highest standards of patient care.",
   },
   {
+    name: "DR. Charles Ofusuhene Debrah",
+    role: "Medical  Officer",
+    image: placeholder6,
+    bio: "Oversees Medical services, ensuring quality care and professional standards.",
+  },
+  {
     name: "Baba Osman",
-    role: "MPH, Clinic Leadership",
+    role: "Acting Clinic Manager",
     image: placeholder3,
     bio: "Brings expertise in public health and clinic management to enhance service delivery.",
   },
@@ -30,7 +38,14 @@ const managementProfiles = [
     image: placeholder4,
     bio: "Manages financial operations to support the clinic's growth and sustainability.",
   },
+  {
+    name: "Madam Hilda Brakoh",
+    role: "Nurses and Midwifery Incharge",
+    image: placeholder5,
+    bio: "Oversees nursing and midwifery services, ensuring quality care and professional standards.",
+  },
 ];
+
 
 export default function Management() {
   return (

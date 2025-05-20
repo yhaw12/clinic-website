@@ -17,7 +17,7 @@ const Hero = () => {
     <main className="flex-grow">
       {/* Section 1 — Expert Multispecialty Care */}
       <motion.div
-        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
+        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
         initial={{ y: -50, opacity: 0 }}
         variants={dropInVariants}
         whileInView={{ y: 0, opacity: 1 }}
@@ -59,7 +59,7 @@ const Hero = () => {
 
       {/* Section 2 — Our Services */}
       <motion.div
-        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
+        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
         initial={{ y: -50, opacity: 0 }}
         variants={dropInVariants}
         whileInView={{ y: 0, opacity: 1 }}
@@ -81,7 +81,6 @@ const Hero = () => {
           <ul className="list-disc list-inside space-y-3 mb-6 text-base md:text-lg">
             <li>Emergency care and outpatient services</li>
             <li>General medicine and family health</li>
-            <li>Specialized care in cardiology, endocrinology, orthopaedics & more</li>
             <li>Imaging & diagnostics including ultrasound and lab tests</li>
           </ul>
           <a href="#" className="inline-flex items-center text-sm">
@@ -104,7 +103,7 @@ const Hero = () => {
 
       {/* Section 3 — Accessible Healthcare for Everyone */}
       <motion.div
-        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
+        className="max-w-screen-xl mx-auto max-[650px]:mx-0 mx-4 md:mx-auto px-6 md:px-16 mb-16 flex flex-col md:grid md:grid-cols-2 items-stretch"
         initial={{ y: -50, opacity: 0 }}
         variants={dropInVariants}
         whileInView={{ y: 0, opacity: 1 }}

@@ -15,7 +15,7 @@ const About = () => {
       icon: <FaUserMd className="text-4xl text-blue-800 mb-4" />,
       title: "Our Team",
       content:
-        "Our dedicated team includes experienced General Practitioners, Nurses, Pediatricians, and Women’s Health Specialists, all working together to ensure personalized care for every patient.",
+        "Our dedicated team includes experienced General Practitioners, Nurses, Pediatricians, and Midwives, all working together to ensure personalized care for every patient.",
     },
     vision: {
       icon: <FaGlobeAfrica className="text-4xl text-blue-800 mb-4" />,

@@ -13,7 +13,7 @@ const dropInVariants = {
 
 const ServiceSection = ({ title, description, subText, linkText, image, reverse }) => {
   return (
-    <div className={`max-w-screen-xl mx-auto px-4 md:px-16 mb-16 
+    <div className={`max-w-screen-xl mx-auto px-6 md:px-16 mb-16 
       flex flex-col md:grid md:grid-cols-2 items-stretch
     `}>
       {/* Image */}
