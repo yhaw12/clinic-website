@@ -5,69 +5,60 @@
     <link rel="icon" href="%PUBLIC_URL%/dgifav.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="The Best Clinic In Kasoa And Its Area"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/dgifav.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-     <!-- SEO Meta -->
-    <title>Divine Sanitas Medical Clinic</title>
     <meta name="description" content="Providing exceptional healthcare in Kasoa since 2010." />
-    <meta name="keywords" content="medical clinic, Ghana healthcare, Divine Sanitas" />
+    <meta name="keywords" content="medical clinic, Ghana healthcare, Divine Sanitas, Kasoa clinic" />
     <meta name="author" content="Divine Sanitas Medical Clinic" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/dgifav.png" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+     <!-- Canonical -->
+    <link rel="canonical" href="https://divinesanitasmed.com" />
+
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Divine Sanitas Medical Clinic" />
     <meta property="og:description" content="Trusted care from skilled professionals in Ghana." />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content="https://divinesanitasmed.com/og-image.jpg" />
     <meta property="og:url" content="https://divinesanitasmed.com" />
     <meta property="og:type" content="website" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Divine Sanitas Medical Clinic" />
+    <meta name="twitter:description" content="Trusted care from skilled professionals in Ghana." />
+    <meta name="twitter:image" content="https://divinesanitasmed.com/og-image.jpg" />
+
+    <!-- SEO Title -->
     <title>Divine Sanitas Medical Clinic</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Divine Sanitas Medical Clinic",
+    "image": "https://divinesanitasmed.com/og-image.jpg",
+    "url": "https://divinesanitasmed.com",
+    "telephone": "+233244760710",
+    "description": "Providing exceptional healthcare in Kasoa since 2010.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kasoa Second Bus Stop",
+      "addressLocality": "Kasoa",
+      "addressRegion": "Central Region",
+      "addressCountry": "GH"
+    },
+    "openingHours": "Mo-Sa 08:00-18:00"
+  }
+  </script>
 </html>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "Divine Sanitas Medical Clinic",
-  "url": "https://divinesanitasmed.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Kasoa",
-    "addressCountry": "GH"
-  },
-  "telephone": "+233244760710"
-}
-</script>

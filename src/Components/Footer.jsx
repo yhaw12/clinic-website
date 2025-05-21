@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start space-y-4">
             <img
               src={logo}
-              alt="Divine Sanitas Medical Clinic"
+              alt="Divine Sanitas Medical Clinic - kasoa"
               className="h-16 mb-6"
             />
             <p className="text-sm text-center md:text-left">

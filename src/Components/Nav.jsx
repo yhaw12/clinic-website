@@ -107,7 +107,7 @@ const Navbar = () => {
       <header className="fixed w-full top-0 bg-white shadow-sm z-50 transition-all duration-300">
         <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-center lg:justify-between relative">
           <a href="/" className="flex-shrink-0">
-            <img src={logo} alt="DGI Ghana Hospital Logo" className="h-20 cursor-pointer" />
+            <img src={logo} alt="Divine Sanitas Medical Clinic - Best Clinic in Kasoa" className="h-20 cursor-pointer" />
           </a>
           {/* Desktop Nav + Search Icon */}
           <div className="hidden lg:flex items-center space-x-20">

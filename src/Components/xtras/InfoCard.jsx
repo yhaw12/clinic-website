@@ -15,10 +15,10 @@ const InfoCard = ({ titleSmall, titleLarge, link, bgColor = 'bg-purple-900' }) =
         z-10 overflow-x-hidden`}
       style={inlineStyle}
     >
-      <h3 className="text-lg md:text-xl font-light mb-6">{titleSmall}</h3>
-      <h2 className="text-3xl md:text-5xl font-semibold leading-snug mb-8">
+      <h2 className="text-lg md:text-xl font-light mb-6">{titleSmall}</h2>
+      <h1 className="text-3xl md:text-5xl font-semibold leading-snug mb-8">
         {titleLarge}
-      </h2>
+      </h1>
       <a href={link} className="inline-flex items-center text-base md:text-lg font-medium hover:underline mt-6">
         Find out more
         <svg className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">

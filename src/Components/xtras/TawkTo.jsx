@@ -1,33 +1,13 @@
-import { useEffect } from 'react';
+import React from 'react';
 
 /**
- * TawkTo Chat Widget
+ * TawkTo Chat Widget Placeholder
  *
- * Injects the Tawk.to script snippet into the page
- * and shows a sticky chat bubble.
+ * Renders a container for the Tawk.to widget.
+ * Script is loaded in Layout.jsx based on cookie consent.
  */
 const TawkTo = () => {
-  useEffect(() => {
-    // Prevent multiple injections
-    if (window.Tawk_API) return;
-
-    // Initialize global vars
-    window.Tawk_API = window.Tawk_API || {};
-    window.Tawk_LoadStart = new Date();
-
-    // Create script element
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://embed.tawk.to/6818f69647002d190debf856/1iqgo6fqq';
-    script.charset = 'UTF-8';
-    script.setAttribute('crossorigin', '*');
-
-    // Insert before first script tag
-    const firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(script, firstScript);
-  }, []);
-
-  return null;
+  return <div id="tawkto-container"></div>;
 };
 
 export default TawkTo;
