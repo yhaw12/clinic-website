@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Cookies } from 'react-cookie-consent';
+import { motion } from 'framer-motion';
 
-// Comment: Adding role="dialog" and aria-labelledby="cookie-settings-title" for accessibility
 const CookieSettings = ({ onClose }) => {
   const [settings, setSettings] = useState(() => {
     const consent = Cookies.get('cookieConsent');
-    return consent ? JSON.parse(consent) : { essential: true, analytics: false, marketing: false };
+    return consent
+      ? JSON.parse(consent)
+      : { essential: true, analytics: false, marketing: false };
   });
 
   const handleSave = () => {
@@ -15,17 +17,32 @@ const CookieSettings = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-md flex items-center justify-center z-50">
+    <>
+      {/* Semi-transparent overlay behind drawer */}
       <div
-        className="bg-white rounded-2xl shadow-lg p-6 mx-4 md:mx-16 max-w-2xl relative z-10"
+        className="fixed inset-0 bg-black bg-opacity-20 z-40"
+        onClick={onClose}
+      />
+
+      {/* Bottom drawer container */}
+      <motion.div
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'tween', duration: 0.3 }}
+        className="fixed inset-x-0 bottom-0 bg-white rounded-t-2xl shadow-lg p-6 mx-4 md:mx-16 max-w-2xl z-50"
         role="dialog"
         aria-labelledby="cookie-settings-title"
       >
-        <h3 id="cookie-settings-title" className="text-lg font-medium mb-2 text-gray-700">
+        <h3
+          id="cookie-settings-title"
+          className="text-lg font-medium mb-2 text-gray-700"
+        >
           Cookie Settings
         </h3>
         <p className="text-sm mb-4 text-gray-700">
-          Manage your cookie preferences below. Essential cookies are required for the website to function properly. To find out more:
+          Manage your cookie preferences below. Essential cookies are required
+          for the website to function properly. To find out more:
         </p>
         <div className="flex flex-col md:flex-row gap-4 text-sm">
           <a href="/privacy-policy" className="flex items-center text-purple-900">
@@ -59,30 +76,6 @@ const CookieSettings = ({ onClose }) => {
             </svg>
           </a>
         </div>
-        <div className="mt-6 space-y-3">
-          {['Information that may be used', 'Purposes'].map((title) => (
-            <div
-              key={title}
-              className="flex justify-between items-center text-sm text-gray-600 border-b pb-2"
-            >
-              <span>{title}</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-          ))}
-        </div>
         <div className="mt-6 space-y-4">
           <label className="flex items-center text-sm text-gray-600">
             <input type="checkbox" checked disabled />
@@ -92,7 +85,9 @@ const CookieSettings = ({ onClose }) => {
             <input
               type="checkbox"
               checked={settings.analytics}
-              onChange={(e) => setSettings({ ...settings, analytics: e.target.checked })}
+              onChange={(e) =>
+                setSettings({ ...settings, analytics: e.target.checked })
+              }
             />
             <span className="ml-2">Analytics Cookies</span>
           </label>
@@ -100,7 +95,9 @@ const CookieSettings = ({ onClose }) => {
             <input
               type="checkbox"
               checked={settings.marketing}
-              onChange={(e) => setSettings({ ...settings, marketing: e.target.checked })}
+              onChange={(e) =>
+                setSettings({ ...settings, marketing: e.target.checked })
+              }
             />
             <span className="ml-2">Marketing Cookies</span>
           </label>
@@ -119,9 +116,8 @@ const CookieSettings = ({ onClose }) => {
             Save Settings
           </button>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </>
   );
 };
-
 export default CookieSettings;

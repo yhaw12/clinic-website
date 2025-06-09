@@ -1,12 +1,29 @@
 import React from "react";
 import Navbar from "../Nav";
-import Footer  from "../Footer";
+import Footer from "../Footer";
 
 const CookiePolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Navbar />
-      <main className="max-w-7xl mx-auto px-4 py-12">
+    <>
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
+        <main className="max-w-7xl mx-auto px-4 py-12">
+          {/* Main content can remain here if needed */}
+        </main>
+        <Footer />
+      </div>
+      <div
+        className="
+          fixed bottom-0 left-0 right-0
+          bg-white
+          rounded-t-lg
+          shadow-lg
+          p-6 mx-4 md:mx-16
+          max-w-7xl
+          z-50
+          CookieConsent
+        "
+      >
         <h1 className="text-4xl font-bold text-[#32274D] mb-8">
           Cookie Policy
         </h1>
@@ -62,9 +79,8 @@ const CookiePolicy = () => {
             </p>
           </section>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
